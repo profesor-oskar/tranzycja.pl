@@ -15,6 +15,7 @@ Społeczności osób trans i osób autystycznych dzielą ze sobą ten sam proble
 :::
 
 ## Czym jest autyzm?
+AAALGOLIA
 
 Autyzm to uwarunkowany genetycznie wariant ludzkiego rozwoju. Do cech autystycznych zaliczamy:
 
