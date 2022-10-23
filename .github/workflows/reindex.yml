@@ -7,6 +7,7 @@ on:
  pull_request:
     branches:
       - main
+      - algolia-ci
     types: [closed]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -36,4 +37,6 @@ jobs:
          npm install &&
          npm run production &&
          vendor/bin/jigsaw build &&
+         echo ${{ github.event.pull_request.base.ref }} && 
+         echo ${{ github.event.pull_request.head.ref }} &&
          echo $( git diff origin/${{ github.event.pull_request.base.ref }}..origin/${{ github.event.pull_request.head.ref }} --name-status | grep -i '^M' | awk -F ' ' '{print $2}' | grep -i '.md' | grep -i 'source/' )         
