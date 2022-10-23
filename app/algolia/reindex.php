@@ -9,6 +9,7 @@ use Algolia\AlgoliaSearch\SearchClient;
 use Algolia\AlgoliaSearch\Exceptions\BadRequestException;
 
 var_dump($argv);
+throw new \Exception("nope");
 $client = SearchClient::create('C8U4P0CC81', getenv('ADMIN_API_KEY'));
 $articles_index = $client->initIndex('articles');
 $tags_index = $client->initIndex('tags');
